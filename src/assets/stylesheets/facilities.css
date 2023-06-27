@@ -1,0 +1,132 @@
+/* Facilities */
+.facilities {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.header {
+  border-radius: 8px;
+  /* width: 98%; */
+  width: 117em;
+  height: 15vh;
+  background: linear-gradient(
+      to left,
+      rgba(44, 53, 0, 0.8),
+      rgba(44, 53, 0, 0.8),
+      rgba(44, 53, 0, 0.8)
+    ),
+    url(../images/carousel/search-bar-back.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* padding-block: 10px; */
+  padding: 10px 0;
+}
+.header-logo {
+  width: fit-content;
+  color: rgba(235, 242, 236, 1);
+  font-family: "Allura", cursive;
+  font-size: 3rem;
+  text-shadow: 0.1rem 0.2rem rgba(0, 0, 0, 0.25);
+}
+.header-sub {
+  display: flex;
+  justify-content: center;
+  text-shadow: 1px 2px rgba(0, 0, 0, 0.25);
+  color: rgba(235, 242, 236, 1);
+  font-size: 12px;
+  text-align: center;
+  bottom: 12px;
+  position: relative;
+}
+.header-rating {
+  background-position: center;
+}
+.header-rating img {
+  width: 50px;
+}
+.r-rating {
+  text-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+}
+.fac-content {
+  width: 99%;
+  height: 85vh;
+  padding: 0.5%;
+  display: flex;
+}
+.rooms-container {
+  border-radius: 10px;
+  margin: 0.1em 0.3em;
+  width: 33%;
+  background: linear-gradient(
+      to left,
+      rgba(86, 99, 61, 0.3),
+      rgba(86, 99, 61, 0.3),
+      rgba(86, 99, 61, 0.3)
+    ),
+    url(../images/cover-rooms.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dining-container {
+  border-radius: 10px;
+  margin: 0.1em 0.3em;
+  background: linear-gradient(
+      to left,
+      rgba(86, 99, 61, 0.3),
+      rgba(86, 99, 61, 0.3),
+      rgba(86, 99, 61, 0.3)
+    ),
+    url(../images/cover-dining.jpg);
+  width: 33%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hotel-oasis-container {
+  border-radius: 10px;
+  margin: 0.1em 0.3em;
+  background: linear-gradient(
+      to left,
+      rgba(86, 99, 61, 0.3),
+      rgba(86, 99, 61, 0.3),
+      rgba(86, 99, 61, 0.3)
+    ),
+    url(../images/cover-hotel_oasis.jpg);
+  width: 33%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fac-buttons {
+  border-radius: 10px;
+  color: rgba(235, 242, 236, 1);
+  font-family: "Inter", sans-serif;
+  width: 9em;
+  border: 0.1rem solid whitesmoke;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.1em;
+  font-weight: 500;
+  box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+}
