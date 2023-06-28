@@ -8,7 +8,6 @@ import carouselImage2 from "../assets/images/carousel/Sunset Cruises.jpg";
 export default function Home() {
   return (
     <>
-      <BrowserRouter>
         <div className="landingPage">
           <div className="land-banner-container">
             <div className="logo-container">
@@ -24,10 +23,9 @@ export default function Home() {
             <img src={carouselImage1} alt="" />
             <img src={carouselImage2} alt="" />
             {/* </div> */}
-            <div className="more">more about us</div>
+            <div className="more" href="#">more about us</div>
           </div>
         </div>
-      </BrowserRouter>
     </>
   );
 }
