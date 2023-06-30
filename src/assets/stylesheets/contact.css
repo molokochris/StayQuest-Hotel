@@ -82,17 +82,18 @@
     background-color: rgba(217, 217, 217, 1);
     border-radius: 8px;
     /* max-width: 0em; */
-    width: 47em;
+    width: 65%;
     height: 5em;
     margin: 15px 0;
     resize: none;
 }
 .foot {
+  padding: 0.3em 0;
   border-radius: 10px 10px 0 0;
   font-family: inter;
   width: 100%;
   color: rgba(235, 242, 236, 1);
   background-color: black;
   text-align: center;
-  font-size: small;
+  font-size: 0.65em;
 }
