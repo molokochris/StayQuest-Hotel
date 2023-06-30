@@ -89,11 +89,12 @@
 }
 .foot {
   padding: 0.3em 0;
-  border-radius: 10px 10px 0 0;
+  /* border-radius: 10px 10px 0 0; */
   font-family: inter;
   width: 100%;
   color: rgba(235, 242, 236, 1);
-  background-color: black;
   text-align: center;
+  background-color: rgba(86, 99, 61, 1);
   font-size: 0.65em;
+  font-weight: bold;
 }
