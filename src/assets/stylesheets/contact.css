@@ -45,6 +45,7 @@
     padding: 6px;
     width: 90px;
     border-radius: 10px;
+    box-shadow: 1px 2px rgba(0, 0, 1, 0.3);
 }
 .form-container {
     width: 50%;
@@ -65,7 +66,7 @@
     
 }
 .form input {
-    padding: 0.2em;
+    padding: 0.4em;
     height: 2em;
     width: 22em;
     margin: 10px 15px;
@@ -75,13 +76,23 @@
     border: none;
 }
 .textfield {
-    padding: 0.2em;
+    padding: 0.4em;
     border: none;
     color: rgba(0, 0, 0, 0.6);
     background-color: rgba(217, 217, 217, 1);
     border-radius: 8px;
-    max-width: 22em;
-    min-width: 22em;
+    /* max-width: 0em; */
+    width: 47em;
     height: 5em;
     margin: 15px 0;
+    resize: none;
+}
+.foot {
+  border-radius: 10px 10px 0 0;
+  font-family: inter;
+  width: 100%;
+  color: rgba(235, 242, 236, 1);
+  background-color: black;
+  text-align: center;
+  font-size: small;
 }

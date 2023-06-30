@@ -30,6 +30,9 @@ export default function Contact() {
           <button className="send-button">SEND</button>
         </div>
       </div>
+      <div className="foot">
+        All Right Reserved &copy;
+      </div>
     </div>
   );
 }
