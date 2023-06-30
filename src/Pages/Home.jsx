@@ -4,6 +4,9 @@ import "../assets/stylesheets/home.css";
 import carouselImage from "../assets/images/carousel/hotel1.jpg";
 import carouselImage1 from "../assets/images/carousel/hotel5.jpg";
 import carouselImage2 from "../assets/images/carousel/Sunset Cruises.jpg";
+import Facilities from "../Components/Facilities";
+import About from "../Components/About";
+import Contact from "../Components/Contact";
 
 export default function Home() {
   return (
@@ -26,6 +29,9 @@ export default function Home() {
             <div className="more" href="#">more about us</div>
           </div>
         </div>
+        <Facilities />
+        <About />
+        <Contact />
     </>
   );
 }
