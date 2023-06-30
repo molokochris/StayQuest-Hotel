@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../assets/stylesheets/rooms.css";
-import "../assets/stylesheets/Facilities.css";
+import "../assets/stylesheets/facilities.css";
 
 export default function Rooms() {
   return (
