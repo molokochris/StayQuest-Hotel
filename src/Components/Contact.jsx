@@ -25,13 +25,14 @@ export default function Contact() {
             <input type="text" placeholder="Surname" />
             <input type="text" placeholder="Email" />
             <input type="text" placeholder="Contact Numbers" />
+            <br />
             <textarea type="text" placeholder="Message" className="textfield" />
           </div>
           <button className="send-button">SEND</button>
         </div>
       </div>
       <div className="foot">
-        All Right Reserved &copy;
+        All Rights Reserved &copy;
       </div>
     </div>
   );
