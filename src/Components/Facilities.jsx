@@ -1,16 +1,7 @@
 import React from "react";
 import "../assets/stylesheets/facilities.css";
 import image from "../assets/images/rating-cropped.png";
-import {
-  BrowserRouter,
-  Link,
-  Route,
-  Routes,
-  useNavigate,
-} from "react-router-dom";
-import Rooms from "../Pages/Rooms";
-import HotelOasis from "../Pages/HotelOasis";
-import OasisGrill from "../Pages/OasisGrill";
+import { Link } from "react-router-dom";
 
 export default function Facilities() {
   return (
