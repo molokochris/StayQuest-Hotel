@@ -1,0 +1,37 @@
+.oasisgrill-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.header-logo {
+  font-size: 1.6em;
+}
+.header-sub {
+  font-family: Andika;
+  font-weight: 400;
+}
+.a-block {
+  width: 35%;
+  border-radius: 10px;
+    height: 99%;box-shadow: 1px 1px rgba(0, 0, 1, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0.1em 0.2em rgba(0, 0, 0, 0.25);
+  background-image: url(../images/outdoor-resturant.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.back-btn {
+  margin-top: 90%;
+  width: fit-content;
+  background-color: rgba(235, 242, 236, 0.8);
+  box-shadow: 1px 1px rgba(0, 0, 1, 0.3);
+  color: whitesmoke;
+  /* padding: 0.5em; */
+  border-radius: 100%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

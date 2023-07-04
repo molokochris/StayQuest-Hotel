@@ -103,19 +103,21 @@
 .rm-type .clm-1 {
   height: 100%;
   width: 40%;
+  padding-left: 5px;
 }
 .clm-1 h6 {
-  /* padding-top: 5%; */
+  padding-top: 3px;
+  font-size: 1em;
   height: 40%;
   margin: 0;
   display: flex;
   /* align-items: top; */
-  justify-content: center;
+  /* justify-content: center; */
 }
 .pricing {
   height: 50%;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
 }
 .pricing h5 {
   /* padding-top: 50%; */
@@ -132,16 +134,48 @@
   display: flex;
   align-items: flex-end;
 }
+.clm-2 {
+  display: flex;
+  align-items: center;
+}
+.clm-2 p {
+  font-size: 0.6em;
+  text-align: center;
+}
+.book-btn {
+  text-align: center;
+  width: fit-content;
+  background-color: black;
+  filter: opacity(50%);
+  position: relative;
+  color: whitesmoke;
+  border: 1px whitesmoke solid;
+  border-radius: 10px;
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 0.3em 0.5em;
+  bottom: 60%;
+  left: 40%;
+}
 .img-container {
   /* background-color: red; */
   height: 100%;
   width: 30%;
-  border-radius: 0.2em 0.5em 0.5em 0.2em;
+  /* border-radius: 0.2em 0.5em 0.5em 0.2em; */
 }
 .img-container img {
   border-radius: 0.2em 0.5em 0.5em 0.2em;
   width: 100%;
   height: 100%;
+}
+.avail-room {
+  position: relative;
+  right: 0%;
+  top: -100%;
+  width: fit-content;
+  padding: 0.4em;
+  /* border-radius: 0.2em; */
+  background-color: rgba(116, 127, 96, 0.8);
 }
 .back-btn {
   width: fit-content;
