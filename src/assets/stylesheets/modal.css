@@ -11,7 +11,8 @@
     height: 98%;
     border-radius: 10px;
     /* left: 30%; */
-    overflow: visible;
+    /* overflow: auto; */
+    transition: ease-in-out;
 }
 .head {
     border-radius: 10px 10px 0 0 ;
@@ -19,7 +20,7 @@
     justify-content: center;
     align-items: center;
     color: whitesmoke;
-    font-size: 1.2em;
+    font-size: 1.4em;
     text-shadow: 1px 1px rgba(0, 0, 1, 0.3);
     font-family: "allura";
     height: 5%;
@@ -39,4 +40,68 @@
     height: 40%;
     width: 100%;
     background-color: rgb(56,58,56);
+}
+.z-section {
+    height: 48%;
+    margin-top: 1%;
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.rm-description {
+    /* border-radius: 10px; */
+    width: 33%;
+    /* background-color: yellow; */
+    margin: 0 0.25% 0 0.25%;
+    display: flex;
+    justify-content: center;}
+.rm-facilities {
+    /* border-radius: 10px; */
+    margin-left: 0.25%;
+    width: 33%;
+    background-color: rgb(94,97,94);
+    display: flex;
+    justify-content: center;}
+.rm-price {
+    /* border-radius: 10px; */
+    margin-right: 0.25%;
+    width: 33%;
+    background-color: rgb(94,97,94);
+    /* display: flex; */
+}
+.rm-price-brk {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+}
+.rm-pay {
+    /* border-radius: 0 0 4px 0; */
+    display: flex;
+    float: right;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 10%;
+    background-color: aqua;
+    /* position: relative; */
+    
+}
+.close-btn {
+    font-weight: bolder;
+    background-color: rgba(0, 0, 1, 0.2);
+    color: whitesmoke;
+    border: none;
+    padding: 0.5em;
+    border-radius: 0 10px;
+    position: absolute;
+    /* z-index: 2; */
+    right: 0%;
+}
+.close-btn:hover {
+    background-color: blue;
+}
+.close-btn:active {
+    background-color: tomato;
 }
