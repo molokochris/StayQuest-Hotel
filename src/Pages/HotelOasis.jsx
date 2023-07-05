@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../assets/stylesheets/facilities.css";
 import "../assets/stylesheets/hoteloasis.css";
 import image from "../assets/images/rating-cropped.png";
-import Modal from "react-modal";
 
 // Modal.setAppElement('#root');
 
