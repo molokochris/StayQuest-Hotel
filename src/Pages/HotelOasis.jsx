@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "../assets/stylesheets/facilities.css";
 import "../assets/stylesheets/hoteloasis.css";
 import image from "../assets/images/rating-cropped.png";
+import Modal from 'react-modal';
+
+Modal.setAppElement();
 
 export default function HotelOasis() {
+  
+  const [isModalOpen, setModalState] = useState(false);
+
+  const openModal = () => {
+    setModalState(true);
+  }
+  const closeModal = () => {
+    setModalState(false);
+  }
+
   return (
     <div className="hotelOasis">
       <div className="header">

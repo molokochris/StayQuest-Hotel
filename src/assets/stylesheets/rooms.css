@@ -59,7 +59,7 @@
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  margin-bottom: 10em;
+  margin-bottom: 2em;
 }
 .feature-btn {
   border-radius: 8px;
