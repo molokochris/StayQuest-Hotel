@@ -16,7 +16,7 @@ export default function HotelOasis() {
         </div>
       </div>
       <div className="ex-container">
-        <div className="card">
+        <div className="card cd-1">
           <div className="cd-title">Beachside Bliss</div>
           <div className="cd-text">
             Unwind on pristine sandy beaches, bask in the sun, and take
