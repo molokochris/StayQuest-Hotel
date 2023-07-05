@@ -27,12 +27,13 @@
     width: 100%;
 }
 .s-head {
-    width: 100%;
+    width: 98%;
     height: 5%;
     background-color: rgb(94,97,94);
     color: whitesmoke;
     display: flex;
     align-items: center;
+    padding-left: 2%;
 }
 .i-head {
     height: 40%;
