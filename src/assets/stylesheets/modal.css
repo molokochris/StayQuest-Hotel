@@ -1,0 +1,26 @@
+.modal-container {
+    font-family: "Inter";
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    background-color: aliceblue;
+    width: 98%;
+    position: absolute;
+    z-index: 1;
+    height: 98%;
+    border-radius: 10px;
+    /* left: 30%; */
+}
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    font-size: 1.2em;
+    text-shadow: 1px 1px rgba(0, 0, 1, 0.3);
+    font-family: "allura";
+    height: 5%;
+    background-color: rgb(86,99,61);
+    width: 100%;
+}
