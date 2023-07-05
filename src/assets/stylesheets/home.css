@@ -1,6 +1,18 @@
 #root {
   background-color: rgba(235, 242, 236, 1);
 }
+html::-webkit-scrollbar{
+  width: 0.3em;
+  border-left: 1px solid rgba(86, 99, 61, 1);
+  border-right: 1px solid rgba(86, 99, 61, 1);
+  /* height: 1em; */
+  background-color: rgba(235, 242, 236, 1);
+}
+html::-webkit-scrollbar-thumb{
+  background: rgba(86, 99, 61, 1);
+  filter: opacity(20%);
+  /* border-radius: 20px; */
+}
 .landingPage {
   height: 100vh;
   display: flex;

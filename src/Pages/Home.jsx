@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Link } from "react-router-dom";
 import React from "react";
 import "../assets/stylesheets/home.css";
 import carouselImage from "../assets/images/carousel/hotel1.jpg";
@@ -11,27 +11,29 @@ import Contact from "../Components/Contact";
 export default function Home() {
   return (
     <>
-        <div className="landingPage">
-          <div className="land-banner-container">
-            <div className="logo-container">
-              <span>StayQuest</span>
-            </div>
-            <span className="banner-title">
-              Find your next holiday destination with our help
-            </span>
+      <div className="landingPage">
+        <div className="land-banner-container">
+          <div className="logo-container">
+            <span>StayQuest</span>
           </div>
-          <div className="imageCarousel_container">
-            {/* <div className="imageCarousel"> */}
-            <img src={carouselImage} alt="" />
-            <img src={carouselImage1} alt="" />
-            <img src={carouselImage2} alt="" />
-            {/* </div> */}
-            <div className="more" href="#">more about us</div>
+          <span className="banner-title">
+            Find your next holiday destination with our help
+          </span>
+        </div>
+        <div className="imageCarousel_container">
+          {/* <div className="imageCarousel"> */}
+          <img src={carouselImage} alt="" />
+          <img src={carouselImage1} alt="" />
+          <img src={carouselImage2} alt="" />
+          {/* </div> */}
+          <div className="more" href="#more">
+            more about us
           </div>
         </div>
-        <Facilities />
-        <About />
-        <Contact />
+      </div>
+      <Facilities />
+      <About />
+      <Contact />
     </>
   );
 }
