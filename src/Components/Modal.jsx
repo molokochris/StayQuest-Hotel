@@ -24,8 +24,8 @@ export default function Modal({ openModal, setOpenModal }) {
         </div>
         <div className="modal-head">
           <h4>
-            Please note that you have to create an account in in order to book a
-            room from us
+            Please note that you have to create an account with us in order to book a
+            room
           </h4>
         </div>
         <div className="form">
