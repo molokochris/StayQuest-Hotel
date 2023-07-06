@@ -14,18 +14,14 @@ export default function Modal({ openModal, setOpenModal }) {
     <div className="modal1-container">
       <div className="modal-content">
         <div className="top">
-          <Link
-            className="close-btn"
-            to="\"
-            onClick={() => setOpenModal(!openModal)}
-          >
+          <div className="close-btn" onClick={() => setOpenModal(!openModal)}>
             X
-          </Link>
+          </div>
         </div>
         <div className="modal-head">
           <h4>
-            Please note that you have to create an account with us in order to book a
-            room
+            Please note that you have to create an account with us in order to
+            book a room
           </h4>
         </div>
         <div className="form">
