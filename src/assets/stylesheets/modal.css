@@ -132,7 +132,19 @@
     text-decoration: none;
 } */
 .payment-div {
-    height: 20vh;
+    /* height: 20vh; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2px;
+    align-items: center;
+    background-color: rgba(0, 0, 1, 0.3);
+    flex-direction: column;
+    color: whitesmoke;
+}
+.form {
+  display: flex;
+  justify-content: center;
 }
 .close-btn {
   font-weight: bolder;

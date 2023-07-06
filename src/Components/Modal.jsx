@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import "../assets/stylesheets/modal.css";
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes, useNavigate } from "react-router-dom";
 
 export default function Modal({ openModal, setOpenModal }) {
   const [showPay, setShowPay] = useState(false);
 
-  // const navigation = useNavigation();
+  const navigation = useNavigate();
 
-  // const goBack = () => {
-  //   navigation.goBack();
-  // };
+  const goBack = () => {
+    navigation("/");
+  };
   return (
     <div className="modal-container">
       <div className="head">StayQuest</div>
       <div className="s-head">Standard Room</div>
       <div className="i-head">
-        {/* <p>
+        <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab eligendi
           beatae quas perspiciatis obcaecati ratione asperiores, voluptatem
           illo, magni, amet autem voluptatibus est rerum. Error perferendis
@@ -27,7 +27,7 @@ export default function Modal({ openModal, setOpenModal }) {
           laudantium eos culpa quasi delectus deserunt! Sed quae libero, eos
           vitae facere a minus dolorem, porro ex esse quam nobis? Fugit ducimus
           maxime sint esse consectetur ut molestiae accusamus vero!
-        </p> */}
+        </p>
       </div>
       <div className="z-section">
         <div className="rm-facilities">
@@ -120,20 +120,16 @@ export default function Modal({ openModal, setOpenModal }) {
       </Link>
       {showPay && (
         <div className="payment-div">
-          <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab eligendi
-          beatae quas perspiciatis obcaecati ratione asperiores, voluptatem
-          illo, magni, amet autem voluptatibus est rerum. Error perferendis
-          dolorem blanditiis aspernatur maxime praesentium? Enim, voluptates.
-          Assumenda nobis sunt animi earum similique, excepturi maxime beatae
-          culpa dolorem natus facere reiciendis rerum. Qui consequatur ullam
-          quis aliquid labore, sed aspernatur rem eum accusantium perferendis ab
-          vel nulla accusamus maxime sunt aliquam, numquam facilis esse
-          laudantium eos culpa quasi delectus deserunt! Sed quae libero, eos
-          vitae facere a minus dolorem, porro ex esse quam nobis? Fugit ducimus
-          maxime sint esse consectetur ut molestiae accusamus vero!
-        </p>
-          <br />
+          <h4 className="">
+            Please enter your details so we can reserve a room for you
+          </h4>
+          <div className="form">
+            <input type="text" placeholder="First Name" />
+            <input type="text" placeholder="Surname" />
+            <input type="text" placeholder="Email Address" />
+            <br /><br />
+            <button type="submit">submit</button>
+          </div>
         </div>
       )}
     </div>
