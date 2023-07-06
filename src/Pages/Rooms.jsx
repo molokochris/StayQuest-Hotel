@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Route, Routes, useNavigation } from "react-router-dom";
 import "../assets/stylesheets/rooms.css";
 import "../assets/stylesheets/facilities.css";
 import Modal from "../Components/Modal";
 
 export default function Rooms() {
-  const [openModal, setOpenModal] = useState(false);
+  const [openModal, setOpenModal] = useState(true);
+
+  
 
   return (
     <div className="container">
@@ -48,9 +50,13 @@ export default function Rooms() {
             </div>
             <div className="img-container">
               <img alt="" src="/standard.jpg" />
-              <div className="book-btn">
+              <Link
+                to="standard-room"
+                className="book-btn"
+                onClick={() => setOpenModal(true)}
+              >
                 Reserve
-              </div>
+              </Link>
               <div className="avail-room">5</div>
             </div>
           </div>
@@ -75,7 +81,7 @@ export default function Rooms() {
             </div>
             <div className="img-container">
               <img alt="" src="/deluxe.jpg" />
-              <div className="book-btn" onClick={() => setOpenModal(true)}>Reserve</div>
+              <div className="book-btn">Reserve</div>
               <div className="avail-room">5</div>
             </div>
           </div>
@@ -132,7 +138,17 @@ export default function Rooms() {
           </div>
         </div>
       </div>
-      {openModal && <Modal openModal={openModal} setOpenModal={setOpenModal}  />}
+      {/* {  />} */}
+      <Routes>
+        <Route
+          path="standard-room/*"
+          element={
+            openModal && (
+              <Modal openModal={openModal} setOpenModal={setOpenModal} />
+            )
+          }
+        />
+      </Routes>
     </div>
   );
 }
