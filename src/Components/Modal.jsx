@@ -29,10 +29,14 @@ export default function Modal({ openModal, setOpenModal }) {
           </h4>
         </div>
         <div className="form">
-          <input type="text" placeholder="First Name" />
-          <input type="text" placeholder="Surname" />
-          <input type="email" placeholder="Email" />
-          <input type="number" placeholder="Contact Numbers" />
+          <div className="names">
+            <input type="text" placeholder="First Name" />
+            <input type="text" placeholder="Surname" />
+          </div>
+          <div className="contacts">
+            <input type="email" placeholder="Email" />
+            <input type="number" placeholder="Contact Numbers" />
+          </div>
           <div className="submit">
             <button type="submit">Create Account</button>
           </div>
