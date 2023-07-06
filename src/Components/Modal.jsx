@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import "../assets/stylesheets/modal1.css";
-import { Link, Route, Routes, useNavigate } from "react-router-dom";
+// import { Link, Route, Routes, useNavigate } from "react-router-dom";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../config/firebase";
 
 export default function Modal({ openModal, setOpenModal }) {
   const [showPay, setShowPay] = useState(false);
 
-  const navigation = useNavigate();
 
-  const goBack = () => {
-    navigation("/");
-  };
   return (
     <div className="modal1-container">
       <div className="modal-content">
