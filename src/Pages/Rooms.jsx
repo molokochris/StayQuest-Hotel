@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import { Link, Route, Routes, useNavigation } from "react-router-dom";
 import "../assets/stylesheets/rooms.css";
 import "../assets/stylesheets/facilities.css";
-import Modal from "../Components/Modal";
+import View from "../Components/View";
 
 export default function Rooms() {
-  const [openModal, setOpenModal] = useState(true);
 
   
 
@@ -53,10 +52,16 @@ export default function Rooms() {
               <Link
                 to="standard-room"
                 className="book-btn"
-                onClick={() => setOpenModal(true)}
               >
                 Reserve
               </Link>
+              {/* <Link
+                to="standard-room"
+                className="book-btn"
+                onClick={() => setOpenModal(true)}
+              >
+                Reserve
+              </Link> */}
               <div className="avail-room">5</div>
             </div>
           </div>
@@ -138,16 +143,12 @@ export default function Rooms() {
           </div>
         </div>
       </div>
-      {/* {  />} */}
       <Routes>
         <Route
-          path="standard-room/*"
-          element={
-            openModal && (
-              <Modal openModal={openModal} setOpenModal={setOpenModal} />
-            )
-          }
+          path="standard-room"
+          Component={<View />}
         />
+        
       </Routes>
     </div>
   );

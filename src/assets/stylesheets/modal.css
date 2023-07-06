@@ -5,17 +5,17 @@
   align-items: center;
   flex-direction: column;
   background-color: aliceblue;
-  width: 99%;
+  width: 100%;
   position: absolute;
   z-index: 1;
-  height: 99vh;
-  border-radius: 10px;
+  height: 100vh;
+  /* border-radius: 10px; */
   /* left: 30%; */
   /* transition: ease-in-out; */
   overflow: auto;
 }
 .head {
-  border-radius: 10px 10px 0 0;
+  /* border-radius: 10px 10px 0 0; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,7 +46,7 @@
   background-color: rgb(56, 58, 56);
 }
 .z-section {
-  /* height: 48; */
+  /* height: 50%; */
   margin-top: 1%;
   width: 100%;
   /* background-color: blue; */
@@ -141,29 +141,6 @@
     background-color: rgba(0, 0, 1, 0.3);
     flex-direction: column;
     color: whitesmoke;
-}
-.form {
-  display: flex;
-  justify-content: center;
-}
-.close-btn {
-  font-weight: bolder;
-  background-color: rgba(0, 0, 1, 0.2);
-  color: whitesmoke;
-  border: none;
-  padding: 0.5em;
-  border-radius: 0 10px;
-  position: absolute;
-  /* z-index: 2; */
-  right: 0%;
-}
-.close-btn:hover {
-  cursor: pointer;
-  background-color: tomato;
-}
-.close-btn:active {
-  background-color: whitesmoke;
-  color: rgba(0, 0, 1, 0.2);
 }
 .rm-pay:hover {
   background-color: whitesmoke;
