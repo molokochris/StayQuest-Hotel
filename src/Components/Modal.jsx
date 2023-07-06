@@ -6,7 +6,17 @@ import { auth } from "../config/firebase";
 
 export default function Modal({ openModal, setOpenModal }) {
   const [showPay, setShowPay] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  // const [firstName, setFirstName] = useState("");
+  // const [surname, setSurname] = useState("");
+  // const [contactNum, setContactNum] = useState("");
 
+  const register = () => {
+    createUserWithEmailAndPassword(auth, email, password).then(() => {
+      alert("registered successfully");
+    }).catch((error) => console.log("something went wrong: ", error))
+  };
 
   return (
     <div className="modal1-container">
@@ -23,16 +33,39 @@ export default function Modal({ openModal, setOpenModal }) {
           </h4>
         </div>
         <div className="form">
-          <div className="names">
-            <input type="text" placeholder="First Name" />
-            <input type="text" placeholder="Surname" />
-          </div>
+          {/* <div className="names">
+            <input
+              type="text"
+              placeholder="First Name"
+              onChange={(e) => setFirstName(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="Surname"
+              onChange={(e) => setSurname(e.target.value)}
+            />
+          </div> */}
           <div className="contacts">
-            <input type="email" placeholder="Email" />
-            <input type="number" placeholder="Contact Numbers" />
+            <input
+              type="email"
+              placeholder="Email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            {/* <input
+              type="number"
+              placeholder="Contact Numbers"
+              onChange={(e) => setContactNum(e.target.value)}
+            /> */}
+          </div>
+          <div className="password-div">
+            <input
+              type="password"
+              placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
           </div>
           <div className="submit">
-            <button type="submit">Create Account</button>
+            <button onClick={register}>Create Account</button>
           </div>
         </div>
       </div>

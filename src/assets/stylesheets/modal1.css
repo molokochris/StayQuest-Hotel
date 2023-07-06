@@ -64,6 +64,11 @@
     flex-direction: row;
     justify-content: center;
 }
+.password-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .submit {
     width: 100%;
     display: flex;
