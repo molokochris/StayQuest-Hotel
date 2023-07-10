@@ -1,28 +1,41 @@
 import React, { useState } from "react";
 import "../assets/stylesheets/modal1.css";
 // import { Link, Route, Routes, useNavigate } from "react-router-dom";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../config/firebase";
+import { useNavigate } from "react-router-dom";
 
 export default function Modal({ openModal, setOpenModal }) {
   const [showPay, setShowPay] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const [firstName, setFirstName] = useState("");
-  // const [surname, setSurname] = useState("");
-  // const [contactNum, setContactNum] = useState("");
+  const [login, setLogin] = useState(false);
+
+  const history = useNavigate();
 
   const register = () => {
-    createUserWithEmailAndPassword(auth, email, password).then(() => {
-      alert("registered successfully");
-    }).catch((error) => console.log("something went wrong: ", error))
+    createUserWithEmailAndPassword(auth, email, password)
+      .then(() => {
+        alert("registered successfully");
+        setLogin(true);
+        history('/rooms')
+      })
+      .catch((error) => {
+        alert("email is already in use, please login");
+        setLogin(true)
+      });
   };
+  const handleLogin = () => {
+    signInWithEmailAndPassword(auth, email, password).then(() => {
+      console.log()
+    }).catch()
+  }
 
   return (
     <div className="modal1-container">
       <div className="modal-content">
         <div className="top">
-          <div className="close-btn" onClick={() => setOpenModal(!openModal)}>
+          <div className="close-btn" onClick={() => setOpenModal(false)}>
             X
           </div>
         </div>
@@ -33,42 +46,59 @@ export default function Modal({ openModal, setOpenModal }) {
           </h4>
         </div>
         <div className="form">
-          {/* <div className="names">
-            <input
-              type="text"
-              placeholder="First Name"
-              onChange={(e) => setFirstName(e.target.value)}
-            />
-            <input
-              type="text"
-              placeholder="Surname"
-              onChange={(e) => setSurname(e.target.value)}
-            />
-          </div> */}
-          <div className="contacts">
-            <input
-              type="email"
-              placeholder="Email"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            {/* <input
-              type="number"
-              placeholder="Contact Numbers"
-              onChange={(e) => setContactNum(e.target.value)}
-            /> */}
-          </div>
-          <div className="password-div">
-            <input
-              type="password"
-              placeholder="Password"
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
+          {login == false ? (
+            <>
+              <input
+                type="email"
+                placeholder="Email"
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </>
+          ) : (
+            <>
+              <input
+                type="email"
+                placeholder="email"
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </>
+          )}
           <div className="submit">
-            <button onClick={register}>Create Account</button>
+            {login ? (
+              <button onClick={handleLogin}>login</button>
+            ) : (
+              <button onClick={register}>Create Account</button>
+            )}
           </div>
         </div>
       </div>
     </div>
   );
+}
+{
+  /* <div className="form">
+            <input
+              type="email"
+              placeholder="Email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+            />}
+        </div>
+          <div className="submit">
+            <button onClick={register}>Create Account</button>
+          </div> */
 }
