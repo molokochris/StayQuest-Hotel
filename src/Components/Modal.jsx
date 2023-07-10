@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import "../assets/stylesheets/modal1.css";
 // import { Link, Route, Routes, useNavigate } from "react-router-dom";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 import { auth } from "../config/firebase";
 import { useNavigate } from "react-router-dom";
 
@@ -18,18 +22,24 @@ export default function Modal({ openModal, setOpenModal }) {
       .then(() => {
         alert("registered successfully");
         setLogin(true);
-        history('/rooms')
+        history("/rooms/standard-room");
       })
       .catch((error) => {
         alert("email is already in use, please login");
-        setLogin(true)
+        setLogin(true);
       });
   };
-  const handleLogin = () => {
-    signInWithEmailAndPassword(auth, email, password).then(() => {
-      console.log()
-    }).catch()
-  }
+  const handleLogin = (e) => {
+    e.preventDefault
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredentials) => {
+        console.log("logged in!", userCredentials.user);
+        history("/rooms/standard-room")
+      })
+      .catch((e) => {
+        console.log(e.error);
+      });
+  };
 
   return (
     <div className="modal1-container">
@@ -75,30 +85,25 @@ export default function Modal({ openModal, setOpenModal }) {
           )}
           <div className="submit">
             {login ? (
-              <button onClick={handleLogin}>login</button>
+              <div className="button">
+                <button onClick={handleLogin}>login</button>
+                <p>
+                  Don't have an account?{" "}
+                  <span onClick={() => setLogin(false)}>Register</span> instead.
+                </p>
+              </div>
             ) : (
-              <button onClick={register}>Create Account</button>
+              <div className="button">
+                <button onClick={register}>Create Account</button>
+                <p>
+                  Already have an account?{" "}
+                  <span onClick={() => setLogin(true)}>Login</span> instead.
+                </p>
+              </div>
             )}
           </div>
         </div>
       </div>
     </div>
   );
-}
-{
-  /* <div className="form">
-            <input
-              type="email"
-              placeholder="Email"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <input
-              type="password"
-              placeholder="Password"
-              onChange={(e) => setPassword(e.target.value)}
-            />}
-        </div>
-          <div className="submit">
-            <button onClick={register}>Create Account</button>
-          </div> */
 }
