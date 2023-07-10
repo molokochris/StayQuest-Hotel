@@ -5,7 +5,7 @@ import Modal from "../Components/Modal";
 
 export default function View() {
   const [showPay, setShowPay] = useState(false);
-  const [openModal, setOpenModal] = useState(true);
+  const [openModal, setOpenModal] = useState(false);
 
   const navigation = useNavigate();
 
