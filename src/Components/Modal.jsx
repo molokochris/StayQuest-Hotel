@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "../assets/stylesheets/modal1.css";
+import "../assets/stylesheets/modalStyle.css";
+import bannerImg from '../assets/images/sign-up-alt0.jpg';
 // import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import {
   getAuth,
@@ -30,11 +31,11 @@ export default function Modal({ openModal, setOpenModal }) {
       });
   };
   const handleLogin = (e) => {
-    e.preventDefault
+    e.preventDefault;
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredentials) => {
         console.log("logged in!", userCredentials.user);
-        history("/rooms/standard-room")
+        history("/rooms");
       })
       .catch((e) => {
         console.log(e.error);
@@ -42,67 +43,23 @@ export default function Modal({ openModal, setOpenModal }) {
   };
 
   return (
-    <div className="modal1-container">
-      <div className="modal-content">
-        <div className="top">
-          <div className="close-btn" onClick={() => setOpenModal(false)}>
+    <div className="m-container">
+      <div className="m-content">
+        {/* <div className="top"> */}
+          <button className="top close-btn" onClick={() => setOpenModal(false)}>
             X
-          </div>
+          </button>
+        {/* </div> */}
+        <div className="m-banner">
+          <img alt="" src={bannerImg}></img>
         </div>
-        <div className="modal-head">
-          <h4>
-            Please note that you have to create an account with us in order to
-            book a room
-          </h4>
+        <div className="modal-main">
+          <button className="">Register</button>
+          <button className="">Login</button>
         </div>
-        <div className="form">
-          {login == false ? (
-            <>
-              <input
-                type="email"
-                placeholder="Email"
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <input
-                type="password"
-                placeholder="Password"
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </>
-          ) : (
-            <>
-              <input
-                type="email"
-                placeholder="email"
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <input
-                type="password"
-                placeholder="Password"
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </>
-          )}
-          <div className="submit">
-            {login ? (
-              <div className="button">
-                <button onClick={handleLogin}>login</button>
-                <p>
-                  Don't have an account?{" "}
-                  <span onClick={() => setLogin(false)}>Register</span> instead.
-                </p>
-              </div>
-            ) : (
-              <div className="button">
-                <button onClick={register}>Create Account</button>
-                <p>
-                  Already have an account?{" "}
-                  <span onClick={() => setLogin(true)}>Login</span> instead.
-                </p>
-              </div>
-            )}
-          </div>
-        </div>
+        {/* <div className="">
+          <p></p>
+        </div> */}
       </div>
     </div>
   );

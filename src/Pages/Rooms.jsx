@@ -55,13 +55,6 @@ export default function Rooms() {
               >
                 Reserve
               </Link>
-              {/* <Link
-                to="standard-room"
-                className="book-btn"
-                onClick={() => setOpenModal(true)}
-              >
-                Reserve
-              </Link> */}
               <div className="avail-room">5</div>
             </div>
           </div>
@@ -143,13 +136,6 @@ export default function Rooms() {
           </div>
         </div>
       </div>
-      <Routes>
-        <Route
-          path="standard-room"
-          Component={<View />}
-        />
-        
-      </Routes>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../assets/stylesheets/modal.css";
+import "../assets/stylesheets/roomView.css";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import Modal from "../Components/Modal";
 
@@ -86,7 +86,11 @@ export default function View() {
               </span>
             </p>
           </div>
-          <div className="rm-pay" onClick={() => setOpenModal(true)}>
+          <div
+            to="/rooms/standard-room/view"
+            className="rm-pay"
+            onClick={() => setOpenModal(true)}
+          >
             pay
           </div>
         </div>

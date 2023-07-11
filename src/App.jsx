@@ -5,6 +5,8 @@ import Rooms from "./Pages/Rooms";
 import OasisGrill from "./Pages/OasisGrill";
 import HotelOasis from "./Pages/HotelOasis";
 import View from "./Components/View";
+import Login from "./Pages/Login";
+import Signup from "./Pages/Signup";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/rooms/*" element={<Rooms />} />
           <Route path="/rooms/standard-room" element={<View />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
           <Route path="/oasisgrill" element={<OasisGrill />} />
           <Route path="/hoteloasis" element={<HotelOasis />} />
         </Routes>
