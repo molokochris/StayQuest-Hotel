@@ -52,10 +52,11 @@ export default function Modal({ openModal, setOpenModal }) {
         {/* </div> */}
         <div className="m-banner">
           <img alt="" src={bannerImg}></img>
+          <h4>You have to have an account with us in order to book a room</h4>
         </div>
         <div className="modal-main">
-          <button className="">Register</button>
-          <button className="">Login</button>
+          <button className="login-btn">Login</button>
+          <button className="register-btn">Register</button>
         </div>
         {/* <div className="">
           <p></p>
