@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../assets/stylesheets/modalStyle.css";
-import bannerImg from '../assets/images/sign-up-alt0.jpg';
+import bannerImg from "../assets/images/sign-up-alt0.jpg";
 // import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import {
   getAuth,
@@ -8,7 +8,7 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { auth } from "../config/firebase";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Modal({ openModal, setOpenModal }) {
   const [showPay, setShowPay] = useState(false);
@@ -45,22 +45,20 @@ export default function Modal({ openModal, setOpenModal }) {
   return (
     <div className="m-container">
       <div className="m-content">
-        {/* <div className="top"> */}
-          <button className="top close-btn" onClick={() => setOpenModal(false)}>
-            X
-          </button>
-        {/* </div> */}
+        <button className="top close-btn" onClick={() => setOpenModal(false)}>
+          X
+        </button>
         <div className="m-banner">
-          <img alt="" src={bannerImg}></img>
           <h4>You have to have an account with us in order to book a room</h4>
         </div>
         <div className="modal-main">
-          <button className="login-btn">Login</button>
-          <button className="register-btn">Register</button>
+          <Link to="/login" className="login-btn">
+            Login
+          </Link>
+          <Link to="/register" className="register-btn">
+            Register
+          </Link>
         </div>
-        {/* <div className="">
-          <p></p>
-        </div> */}
       </div>
     </div>
   );
