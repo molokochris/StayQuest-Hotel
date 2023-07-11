@@ -4,6 +4,7 @@ import "../assets/stylesheets/login.css";
 export default function Login() {
   return (
     <div className="login-page">
+      <div className="l-banner">1</div>
       <div className="login-container">
         <form>
           <div className="email">

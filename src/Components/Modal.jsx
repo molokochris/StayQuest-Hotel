@@ -9,6 +9,7 @@ import {
 } from "firebase/auth";
 import { auth } from "../config/firebase";
 import { Link, useNavigate } from "react-router-dom";
+import Login from "../Pages/Login";
 
 export default function Modal({ openModal, setOpenModal }) {
   const [showPay, setShowPay] = useState(false);
@@ -41,6 +42,14 @@ export default function Modal({ openModal, setOpenModal }) {
         console.log(e.error);
       });
   };
+  // login logic
+
+  const [isLogged, setIsLogged] = useState(false);
+  console.log("login is:", isLogged);
+
+  const loginOpt = () => {
+    setIsLogged(true);
+  };
 
   return (
     <div className="m-container">
@@ -48,17 +57,42 @@ export default function Modal({ openModal, setOpenModal }) {
         <button className="top close-btn" onClick={() => setOpenModal(false)}>
           X
         </button>
-        <div className="m-banner">
-          <h4>You have to have an account with us in order to book a room</h4>
-        </div>
-        <div className="modal-main">
-          <Link to="/login" className="login-btn">
-            Login
-          </Link>
-          <Link to="/register" className="register-btn">
-            Register
-          </Link>
-        </div>
+        {isLogged ? (
+          <>
+            {/* <div className="login-mod">
+              <form>
+                <div className="email">
+                  <input type="text" name="Email" placeholder="Email" />
+                </div>
+                <div className="password">
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                  />
+                </div>
+                <button className="button">Login</button>
+              </form>
+            </div> */}
+            <Login />
+          </>
+        ) : (
+          <>
+            <div className="m-banner">
+              <h4>
+                You have to have an account with us in order to book a room
+              </h4>
+            </div>
+            <div className="modal-main">
+              <button to="/login" className="login-btn" onClick={loginOpt}>
+                Login
+              </button>
+              <button to="/register" className="register-btn">
+                Register
+              </button>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
