@@ -59,21 +59,6 @@ export default function Modal({ openModal, setOpenModal }) {
         </button>
         {isLogged ? (
           <>
-            {/* <div className="login-mod">
-              <form>
-                <div className="email">
-                  <input type="text" name="Email" placeholder="Email" />
-                </div>
-                <div className="password">
-                  <input
-                    type="password"
-                    name="password"
-                    placeholder="Password"
-                  />
-                </div>
-                <button className="button">Login</button>
-              </form>
-            </div> */}
             <Login />
           </>
         ) : (

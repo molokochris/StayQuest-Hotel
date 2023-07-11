@@ -4,7 +4,7 @@ import "../assets/stylesheets/login.css";
 export default function Login() {
   return (
     <div className="login-page">
-      <div className="l-banner">1</div>
+      <div className="l-banner">StayQuest</div>
       <div className="login-container">
         <form>
           <div className="email">
@@ -13,11 +13,17 @@ export default function Login() {
           <div className="password">
             <input type="password" name="password" placeholder="Password" />
           </div>
-          <button className="button">Login</button>
+        </form>
+        <div className="button">
+          <button>Login</button>
+        </div>
           <p>
             Already have an account? <span>Login</span>
           </p>
-        </form>
+        <div className="other-opts">
+          <span>use google account to login</span>
+          <button>Google</button>
+        </div>
       </div>
     </div>
   );

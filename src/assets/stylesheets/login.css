@@ -7,20 +7,29 @@
   flex-direction: column;
 }
 .l-banner {
-    height: 10%;
-    background-color: yellow;
-    width: 100%;
+  border-radius: .5em .5em 0 0;
+  font-family: allura;
+  font-weight: bold;
+  text-shadow: 1px 1px gray;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+  background-color: #ccc;
+  width: 100%;
 }
 .login-container {
-    height: 90%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 form {
-  width: 90%;
-  height: 100%;
+  width: 86%;
+  /* height: 80%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,5 +52,11 @@ form {
   width: 100%;
 }
 .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+div.button button {
   width: 100%;
 }
