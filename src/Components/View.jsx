@@ -3,10 +3,13 @@ import "../assets/stylesheets/roomView.css";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import Modal from "../Components/Modal";
 
-export default function View() {
+export default function View(props) {
   const [showPay, setShowPay] = useState(false);
   const [openModal, setOpenModal] = useState(false);
+  const [loginSuccess, setLoginSuccess] = useState(props.loginSuccess);
 
+
+  console.log(loginSuccess)
   const navigation = useNavigate();
 
   const goBack = () => {
@@ -15,7 +18,10 @@ export default function View() {
   return (
     <div className="modal-container">
       <div className="head">StayQuest</div>
-      <div className="s-head">Standard Room</div>
+      <div className="s-head">
+        <div className="rmm-type">Standard Room</div>
+        {loginSuccess ? (<div className="">Account</div>) : null}
+      </div>
       <div className="i-head"></div>
       <div className="z-section">
         <div className="rm-facilities">
