@@ -1,0 +1,24 @@
+[24077:24077:0712/121822.330858:ERROR:chrome_browser_cloud_management_controller.cc(162)] Cloud management controller initialization aborted as CBCM is not enabled.
+[24077:24077:0712/121822.591274:ERROR:profile_attributes_storage.cc(894)] Failed to PNG encode the image.
+[24077:24097:0712/121827.084904:ERROR:udev_watcher.cc(98)] Failed to begin udev enumeration.
+/usr/share/libdrm/amdgpu.ids: No such file or directory
+/usr/share/libdrm/amdgpu.ids: No such file or directory
+[24077:24077:0712/121829.729745:ERROR:object_proxy.cc(590)] Failed to call method: org.freedesktop.ScreenSaver.GetActive: object_path= /org/freedesktop/ScreenSaver: org.freedesktop.DBus.Error.NotSupported: This method is not implemented
+[24135:24145:0712/122117.074498:ERROR:ssl_client_socket_impl.cc(978)] handshake failed; returned -1, SSL error code 1, net_error -101
+[24135:24145:0712/122132.528062:ERROR:ssl_client_socket_impl.cc(978)] handshake failed; returned -1, SSL error code 1, net_error -101
+[24077:24077:0712/122411.539976:ERROR:CONSOLE(14)] "Failed to handle media duration metadata: missing publisher key for media key youtube_IPd7DuK0314", source: chrome-extension://mnojpmjdmbbfmejpflffifhffcmidifd/out/brave_extension_background.bundle.js (14)
+[24077:24077:0712/122421.509021:ERROR:CONSOLE(14)] "Failed to handle media duration metadata: missing publisher key for media key youtube_IPd7DuK0314", source: chrome-extension://mnojpmjdmbbfmejpflffifhffcmidifd/out/brave_extension_background.bundle.js (14)
+[24077:24077:0712/122430.942788:ERROR:CONSOLE(14)] "Failed to handle media duration metadata: missing publisher key for media key youtube_IPd7DuK0314", source: chrome-extension://mnojpmjdmbbfmejpflffifhffcmidifd/out/brave_extension_background.bundle.js (14)
+[24077:24077:0712/122430.953786:ERROR:CONSOLE(14)] "Failed to handle media duration metadata: missing publisher key for media key youtube_IPd7DuK0314", source: chrome-extension://mnojpmjdmbbfmejpflffifhffcmidifd/out/brave_extension_background.bundle.js (14)
+[24135:24145:0712/122602.219315:ERROR:ssl_client_socket_impl.cc(978)] handshake failed; returned -1, SSL error code 1, net_error -101
+[24077:24077:0712/123148.424888:ERROR:CONSOLE(14)] "Failed to handle media duration metadata: missing publisher key for media key youtube_IPd7DuK0314", source: chrome-extension://mnojpmjdmbbfmejpflffifhffcmidifd/out/brave_extension_background.bundle.js (14)
+[24077:24077:0712/123148.435418:ERROR:CONSOLE(14)] "Failed to handle media duration metadata: missing publisher key for media key youtube_IPd7DuK0314", source: chrome-extension://mnojpmjdmbbfmejpflffifhffcmidifd/out/brave_extension_background.bundle.js (14)
+[24077:24077:0712/123151.361755:ERROR:CONSOLE(14)] "Failed to handle media duration metadata: missing publisher key for media key youtube_IPd7DuK0314", source: chrome-extension://mnojpmjdmbbfmejpflffifhffcmidifd/out/brave_extension_background.bundle.js (14)
+Fontconfig error: Cannot load default config file: No such file: (null)
+[24077:24077:0712/133639.095381:ERROR:CONSOLE(1)] "Ignoring unauthorized client request from null", source: devtools://devtools/bundled/models/extensions/extensions.js (1)
+[24077:24094:0712/134714.098804:ERROR:cert_verify_proc_builtin.cc(702)] CertVerifyProcBuiltin for rr4---sn-4g5lznes.googlevideo.com failed:
+----- Certificate i=1 (emailAddress=mobile@huawei.com,CN=root.home,L=Wuhan,ST=Hubei,C=CN) -----
+ERROR: No matching issuer found
+
+
+[24135:24145:0712/134714.102646:ERROR:ssl_client_socket_impl.cc(978)] handshake failed; returned -1, SSL error code 1, net_error -202
