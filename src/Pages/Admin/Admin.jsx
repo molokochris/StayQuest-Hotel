@@ -16,7 +16,7 @@ export default function Admin() {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredentials) => {
         console.log("user loggedin successfully", userCredentials.user);
-        navigate("/admin/Dash");
+        navigate("/admin/Dashboard");
       })
       .catch((error) => {
         console.error(error);

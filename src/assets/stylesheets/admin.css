@@ -68,6 +68,7 @@ nav {
     display: flex;
     flex-direction: row;
     /* padding: .5em; */
+    box-shadow: 0 0 2px 0 gray;
 }
 .admin-logo {
     display: flex;
@@ -112,6 +113,15 @@ nav {
 }
 .admin-name {
     font-size: small;
+    color: gray;
+    font-weight: 100em;
+}
+.admin-image {
+    border-radius: 100%;
+    background-color: rgb(60, 90, 30);
+    width: 3em;
+    height: 3em;
+    margin-left: 1em;
 }
 .main {
     display: flex;
@@ -132,21 +142,34 @@ nav {
     /* box-shadow: 1px 2px rgba(60, 90, 30, 0.2); */
     padding: 1em 0;
     margin: 1em 0;
-    text-align: center;
+    /* text-align: center; */
     border-radius: 10px;
     color: gray;
     /* font-weight: bold; */
+    display: flex;
+    align-items: center;
+}
+.opt a {
+    text-decoration: none;
+    color: gray;
+}
+a > span {
+    margin-left: 1em;
 }
 .logout-btn {
     /* width: 100%; */
     text-align: center;
-    padding: 1em 0;
+    padding: 1em 3em;
     /* border-top: .1em solid rgb(60, 90, 30); */
     border-bottom: .1em solid rgb(60, 90, 30);
+    display: flex;
+    align-items: center;
+    /* background-color: yellow; */
 }
 .logout-btn span {
     font-size: small;
     color: gray;
+    margin-left: 1em;
 }
 .admin-foot {
     display: flex;
@@ -154,6 +177,9 @@ nav {
     padding: 1em 2em;
 }
 .main-menu {
-    background-color: green;
+    background-color: whitesmoke;
+    /* margin-top: 4em; */
+    margin-bottom: 1.5em;
+    border-radius: 4px;
     /* width: 88%; */
 }

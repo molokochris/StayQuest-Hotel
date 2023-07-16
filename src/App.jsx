@@ -8,9 +8,11 @@ import View from "./Components/View";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import Admin from "./Pages/Admin/Admin";
-import SignIn from "./Pages/Admin/SignIn";
-import SignUp from "./Pages/Admin/SignUp";
-import Dash from "./Pages/Admin/Dash";
+import Dashboard from "./Pages/Admin/Dashboard";
+import Bookings from "./Pages/Admin/Components/Bookings";
+import Guests from "./Pages/Admin/Components/Guests";
+import Messages from "./Pages/Admin/Components/Messages";
+import AdminRooms from "./Pages/Admin/Components/AdminRooms";
 
 function App() {
   return (
@@ -25,9 +27,13 @@ function App() {
           <Route path="/oasisgrill" element={<OasisGrill />} />
           <Route path="/hoteloasis" element={<HotelOasis />} />
           <Route path="/admin" element={<Admin />} />
-          <Route path="/admin/signup" element={<SignIn />} />
-          <Route path="/admin/login" element={<SignUp />} />
-          <Route path="/admin/Dash" element={<Dash />} />
+          <Route exact path="admin/Dashboard/*">
+            <Route index element={<Dashboard />} />
+            <Route path="adminrooms" element={<AdminRooms />} />
+            <Route path="Bookings" element={<Bookings />} />
+            <Route path="Guests" element={<Guests />} />
+            <Route path="Messages" element={<Messages />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>
