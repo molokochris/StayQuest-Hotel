@@ -26,14 +26,8 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/oasisgrill" element={<OasisGrill />} />
           <Route path="/hoteloasis" element={<HotelOasis />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route exact path="admin/Dashboard/*">
-            <Route index element={<Dashboard />} />
-            <Route path="adminrooms" element={<AdminRooms />} />
-            <Route path="Bookings" element={<Bookings />} />
-            <Route path="Guests" element={<Guests />} />
-            <Route path="Messages" element={<Messages />} />
-          </Route>
+          <Route path="/admin/" element={<Admin />} />
+          <Route index path="admin/Dashboard/*" element={<Dashboard />} />
         </Routes>
       </BrowserRouter>
     </>

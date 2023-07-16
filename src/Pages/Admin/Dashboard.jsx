@@ -6,11 +6,11 @@ import { BiMessage } from "@react-icons/all-files/bi/BiMessage";
 import { BiPowerOff } from "@react-icons/all-files/bi/BiPowerOff";
 import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
-import MainRoutes from "./MainRoutes";
 import Messages from "./Components/Messages.jsx";
-import Rooms from "./Components/AdminRooms";
 import Bookings from "./Components/Bookings";
 import Guests from "./Components/Guests";
+import AdminRooms from "./Components/AdminRooms";
+import Home from "./Components/Home";
 
 export default function Dashboard() {
   return (
@@ -83,7 +83,15 @@ export default function Dashboard() {
             </span>
           </div>
         </div>
-        <div className="main-menu">1</div>
+        <div className="main-menu">
+          <Routes>
+            <Route index path="/" element={<Home />} />
+            <Route path="adminrooms" element={<AdminRooms />} />
+            <Route path="Bookings" element={<Bookings />} />
+            <Route path="Guests" element={<Guests />} />
+            <Route path="Messages" element={<Messages />} />
+          </Routes>
+        </div>
       </div>
     </div>
   );
