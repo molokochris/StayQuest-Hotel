@@ -1,5 +1,6 @@
 import React from "react";
 import "../../assets/stylesheets/admin.css";
+import { FaHome } from "@react-icons/all-files/fa/FaHome";
 
 export default function Dash() {
   return (
@@ -22,7 +23,10 @@ export default function Dash() {
       <div className="main">
         <div className="side-menu">
           <ul className="menu-list">
-            <li className="opt">Home</li>
+            <li className="opt">
+              <FaHome />
+              Home
+            </li>
             <li className="opt">Rooms</li>
             <li className="opt">Guest</li>
             <li className="opt">Booking</li>

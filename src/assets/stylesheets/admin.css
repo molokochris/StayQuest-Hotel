@@ -60,6 +60,8 @@ button {
     flex-direction: column;
 }
 nav {
+    position: sticky;
+    top: 0;
     width: 100%;
     background-color: whitesmoke;
     /* text-align: center; */
@@ -106,7 +108,10 @@ nav {
     align-items: center;
     justify-content: flex-end;
     width: 50em;
-    padding-right: .2em;
+    padding-right: .5em;
+}
+.admin-name {
+    font-size: small;
 }
 .main {
     display: flex;
