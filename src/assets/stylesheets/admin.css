@@ -126,7 +126,8 @@ nav {
 .main {
     display: flex;
     flex-direction: row;
-    background-color: rgb(215, 236, 218);
+    /* background-color: rgb(215, 236, 218); */
+    background-color: rgb(236, 236, 236);
 }
 .side-menu {
     /* width: 20%; */

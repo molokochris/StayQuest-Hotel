@@ -1,14 +1,46 @@
+/* .homeapp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+} */
 .c-head {
   padding: 2em 1em;
+  display: flex;
+  flex-direction: row;
+}
+.clm-1 {
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: 94%;
+  /* margin-right: ; */
+}
+.in-clm1 {
   display: flex;
   flex-direction: column;
 }
 .sub-head {
-    color: gray;
-    font-size: medium;
+  color: gray;
+  font-size: medium;
+  display: flex;
+  align-items: center;
 }
 .heading {
-    font-size: larger;
+  font-size: larger;
+}
+.clm-2 {
+  padding: 0.5em;
+  border: none;
+  float: right;
+}
+.booking-btn {
+  padding: 0 1em;
+  background-color: whitesmoke;
+  border-radius: 6px;
+  color: gray;
+  border: .1em solid gray;
 }
 .c-main {
   background-color: whitesmoke;

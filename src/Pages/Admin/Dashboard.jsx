@@ -85,7 +85,7 @@ export default function Dashboard() {
         </div>
         <div className="main-menu">
           <Routes>
-            <Route index path="/" element={<Home />} />
+            <Route index path="/*" element={<Home />} />
             <Route path="adminrooms" element={<AdminRooms />} />
             <Route path="Bookings" element={<Bookings />} />
             <Route path="Guests" element={<Guests />} />

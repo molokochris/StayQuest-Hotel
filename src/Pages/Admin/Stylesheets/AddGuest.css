@@ -1,0 +1,24 @@
+.add-guests {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    height: 90%;
+    /* flex-direction: column; */
+}
+
+.add-form {
+    /* width: 80%; */
+    /* height: 60%; */
+    border: .1em solid gray;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: start; */
+    /* align-items: center; */
+}
+form input {
+    /* margin: 1em 4em; */
+}
+.add-btn {
+    border-radius: 8px;
+    padding: .5em 1em;
+}
