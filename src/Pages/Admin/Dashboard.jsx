@@ -39,7 +39,7 @@ export default function Dashboard() {
             <li
               className="opt"
               style={
-                (path === "/admin/Dashboard/")
+                ((path === "/admin/Dashboard/") || (path === "/admin/Dashboard/add-guest"))
                   ? { backgroundColor: "green" }
                   : null
               }
