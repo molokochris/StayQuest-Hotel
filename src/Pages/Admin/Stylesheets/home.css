@@ -1,9 +1,3 @@
-/* .homeapp {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: blue;
-} */
 .c-head {
   padding: 2em 1em;
   display: flex;
@@ -40,7 +34,7 @@
   background-color: whitesmoke;
   border-radius: 6px;
   color: gray;
-  border: .1em solid gray;
+  border: 0.1em solid gray;
 }
 .c-main {
   background-color: whitesmoke;
@@ -48,4 +42,7 @@
   box-shadow: 0px 0px 1px 1px rgba(128, 128, 128, 0.1);
   width: 96em;
   height: 46em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

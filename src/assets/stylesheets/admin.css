@@ -146,7 +146,7 @@ nav {
     margin: 1em 0;
     /* text-align: center; */
     border-radius: 10px;
-    color: gray;
+    /* color: gray; */
     /* font-weight: bold; */
     display: flex;
     align-items: center;
@@ -158,10 +158,10 @@ nav {
 a > span {
     margin-left: 1em;
 }
-.opt:active, a:active {
+/* .opt:active, a:active {
     background-color: green;
     color: whitesmoke;
-}
+} */
 .logout-btn {
     /* width: 100%; */
     text-align: center;

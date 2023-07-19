@@ -12,6 +12,9 @@ export default function AddGuest() {
   };
   return (
     <div className="add-guests">
+      <div className="">
+        
+      </div>
       <form className="add-form">
         <div className="g-names">
           <input type="text" placeholder="First Names" />
