@@ -9,10 +9,6 @@ import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import Admin from "./Pages/Admin/Admin";
 import Dashboard from "./Pages/Admin/Dashboard";
-import Bookings from "./Pages/Admin/Components/Bookings";
-import Guests from "./Pages/Admin/Components/Guests";
-import Messages from "./Pages/Admin/Components/Messages";
-import AdminRooms from "./Pages/Admin/Components/AdminRooms";
 
 function App() {
   return (
