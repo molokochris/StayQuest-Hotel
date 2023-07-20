@@ -4,6 +4,7 @@ import { BiCalendar } from "@react-icons/all-files/bi/BiCalendar";
 import { BiHome } from "@react-icons/all-files/bi/BiHome";
 import { BiMessage } from "@react-icons/all-files/bi/BiMessage";
 import { BiPowerOff } from "@react-icons/all-files/bi/BiPowerOff";
+import { BiRestaurant } from "@react-icons/all-files/bi/BiRestaurant.js";
 import React, { useState } from "react";
 import { Link, Route, Routes, useLocation } from "react-router-dom";
 import Messages from "./Components/Messages.jsx";
@@ -11,6 +12,7 @@ import Bookings from "./Components/Bookings";
 import Guests from "./Components/Guests";
 import AdminRooms from "./Components/AdminRooms";
 import Home from "./Components/Home";
+import Reservations from "./Components/Reservations.jsx";
 
 export default function Dashboard() {
   const path = useLocation().pathname;
@@ -39,13 +41,19 @@ export default function Dashboard() {
             <li
               className="opt"
               style={
-                ((path === "/admin/Dashboard/") || (path === "/admin/Dashboard/add-guest"))
+                path === "/admin/Dashboard/" ||
+                path === "/admin/Dashboard/add-guest"
                   ? { backgroundColor: "green" }
                   : null
               }
             >
               <Link
-                style={(path === "/admin/Dashboard/") ? { color: "white" } : null}
+                style={
+                  path === "/admin/Dashboard/" ||
+                  path === "/admin/Dashboard/add-guest"
+                    ? { color: "white" }
+                    : null
+                }
                 to="/admin/Dashboard/"
               >
                 <BiHome />
@@ -113,6 +121,26 @@ export default function Dashboard() {
             <li
               className="opt"
               style={
+                path === "/admin/Dashboard/Reservations"
+                  ? { backgroundColor: "green" }
+                  : null
+              }
+            >
+              <Link
+                style={
+                  path === "/admin/Dashboard/Reservations"
+                    ? { color: "white" }
+                    : null
+                }
+                to="Reservations"
+              >
+                <BiRestaurant />
+                <span>Reservations</span>
+              </Link>
+            </li>
+            <li
+              className="opt"
+              style={
                 path === "/admin/Dashboard/Messages"
                   ? { backgroundColor: "green" }
                   : null
@@ -156,6 +184,7 @@ export default function Dashboard() {
             <Route path="adminrooms" element={<AdminRooms />} />
             <Route path="Bookings" element={<Bookings />} />
             <Route path="Guests" element={<Guests />} />
+            <Route path="Reservations" element={<Reservations />} />
             <Route path="Messages" element={<Messages />} />
           </Routes>
         </div>

@@ -1,6 +1,6 @@
 .add-guests {
-  width: 90%;
-  height: 90%;
+  /* width: 90%; */
+  /* height: 90%; */
   padding: 1em;
   display: flex;
   justify-content: center;
@@ -27,8 +27,8 @@ form input {
   border-radius: 8px;
   padding: 0.5em 1em;
 }
-label option {
-  padding: 0.1em;
+select {
+  padding: 0.4em;
   margin: 0.5em;
-  border-radius: 4px;
+  border-radius: 6px;
 }

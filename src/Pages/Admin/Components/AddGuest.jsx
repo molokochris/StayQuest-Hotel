@@ -14,7 +14,7 @@ export default function AddGuest() {
   const showGuests = (e) => {
     // e.preventDefault();
     setIsShowGuests(true);
-    console.log("selectted: ", e)
+    console.log("selectted: ", e);
   };
   return (
     <div className="add-guests">
@@ -24,30 +24,23 @@ export default function AddGuest() {
           <input type="text" placeholder="First Names" />
           <input type="text" placeholder="Surname" />
         </div>
-        <div className="g-contacts">
+        <br />
+        <div className="g-id">
           <input type="number" placeholder="ID number" />
+        </div>
+        <br />
+        <div className="g-contacts">
           <input type="text" placeholder="Email" />
-          <br />
           <input type="text" placeholder="Contact Numbers" />
         </div>
         <div className="g-room" onChange={(e) => showGuests(e.target.value)}>
           <label>
             <select>
-              <option value="-1">
-                Room Type
-              </option>
-              <option value="1">
-                Standard Room
-              </option>
-              <option value="2">
-                Deluxe Room
-              </option>
-              <option value="3">
-                Executive Room
-              </option>
-              <option value="4">
-                Presidential Room
-              </option>
+              <option value="-1">Room Type</option>
+              <option value="1">Standard Room</option>
+              <option value="2">Deluxe Room</option>
+              <option value="3">Executive Room</option>
+              <option value="4">Presidential Room</option>
             </select>
             {isShowGuests && (
               <select>
