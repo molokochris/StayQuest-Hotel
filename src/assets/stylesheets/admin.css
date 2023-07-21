@@ -151,10 +151,6 @@ nav {
   display: flex;
   align-items: center;
 }
-/* .opt:hover {
-  /* background-color: rgb(2, 110, 2); */
-  box-shadow: 0.8px 0.8px gray;
-} */
 .opt a {
   text-decoration: none;
   color: gray;
