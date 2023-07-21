@@ -1,190 +1,195 @@
 .s-container {
-    width: 30%;
-    background-color: whitesmoke;
-    color: black;
-    font-family: inter;
-    /* height: 60%; */
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    flex-direction: column;
-    border-radius: 2px;
+  width: 30%;
+  background-color: whitesmoke;
+  color: black;
+  font-family: inter;
+  /* height: 60%; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  border-radius: 2px;
 }
 .admin-ban {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .f-container {
-    /* width: fit-content; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 4em;
+  /* width: fit-content; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4em;
 }
 form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* height: 50%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 50%; */
 }
 form label {
-    /* width: 100%; */
-    /* padding: 0 2em; */
-    margin-top: 2em;
-    text-align: center;
+  /* width: 100%; */
+  /* padding: 0 2em; */
+  margin-top: 2em;
+  text-align: center;
 }
 form input {
-    padding: .5em;
-    width: 20em;
-    border: rgb(60, 90, 30) solid .1em;
+  padding: 0.5em;
+  width: 20em;
+  border: rgb(60, 90, 30) solid 0.1em;
 }
 form input:active {
-    border: green solid .1em;
+  border: green solid 0.1em;
 }
 .redText {
-    margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 button {
-    border: .1em solid rgb(60, 90, 30);
-    padding: .5em .8em;
-    color: black;
-    font-weight: 1rem;
-    background-color: rgba(60, 90, 30, 0.2);
+  border: 0.1em solid rgb(60, 90, 30);
+  padding: 0.5em 0.8em;
+  color: black;
+  font-weight: 1rem;
+  background-color: rgba(60, 90, 30, 0.2);
 }
 
 /* Dash styles */
 .dash-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 nav {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    background-color: whitesmoke;
-    /* text-align: center; */
-    display: flex;
-    flex-direction: row;
-    /* padding: .5em; */
-    box-shadow: 0 0 2px 0 gray;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: whitesmoke;
+  /* text-align: center; */
+  display: flex;
+  flex-direction: row;
+  /* padding: .5em; */
+  box-shadow: 0 0 2px 0 gray;
 }
 .admin-logo {
-    display: flex;
-    flex-direction: column;
-    font-family: allura;
-    text-align: center;
-    width: 30em;
-    padding-top: .5em;
+  display: flex;
+  flex-direction: column;
+  font-family: allura;
+  text-align: center;
+  width: 30em;
+  padding-top: 0.5em;
 }
 .admin-logo .logo-text {
-    font-weight: bold;
-    font-size: larger;
-    color: rgb(60, 90, 30);
+  font-weight: bold;
+  font-size: larger;
+  color: rgb(60, 90, 30);
 }
 .admin-logo .sub-text {
-    font-size: medium;
-    padding: .6em 1em;
-    color: rgb(60, 90, 30);
+  font-size: medium;
+  padding: 0.6em 1em;
+  color: rgb(60, 90, 30);
 }
 .search-bar {
-    width: 50em;
-    text-align: center;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  width: 50em;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .search-bar input {
-    width: 25em;
-    height: 2em;
-    border-radius: 8px;
-    padding: .2em .5em;
-    border: none;
-    background-color: rgb(215, 236, 218);
-    color: rgb(60, 90, 30);
+  width: 25em;
+  height: 2em;
+  border-radius: 8px;
+  padding: 0.2em 0.5em;
+  border: none;
+  background-color: rgb(215, 236, 218);
+  color: rgb(60, 90, 30);
 }
 .profile {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 50em;
-    padding-right: .5em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 50em;
+  padding-right: 0.5em;
 }
 .admin-name {
-    font-size: small;
-    color: gray;
-    font-weight: 100em;
+  font-size: small;
+  color: gray;
+  font-weight: 100em;
 }
 .admin-image {
-    border-radius: 100%;
-    background-color: rgb(60, 90, 30);
-    width: 3em;
-    height: 3em;
-    margin-left: 1em;
+  border-radius: 100%;
+  background-color: rgb(60, 90, 30);
+  width: 3em;
+  height: 3em;
+  margin-left: 1em;
 }
 .main {
-    display: flex;
-    flex-direction: row;
-    /* background-color: rgb(215, 236, 218); */
-    background-color: rgb(236, 236, 236);
+  display: flex;
+  flex-direction: row;
+  /* background-color: rgb(215, 236, 218); */
+  background-color: rgb(236, 236, 236);
 }
 .side-menu {
-    /* width: 20%; */
-    padding: 0 2em;
+  /* width: 20%; */
+  /* padding: 0 2em; */
 }
 .menu-list {
-    /* width: 100%; */
-    list-style: none;
-    padding: 2em;
-    margin-bottom: 24em;
+  /* width: 100%; */
+  list-style: none;
+  padding: 2em;
+  margin-bottom: 24em;
 }
 .opt {
-    /* box-shadow: 1px 2px rgba(60, 90, 30, 0.2); */
-    padding: 1em 0;
-    padding-left: 2em;
-    margin: 1em 0;
-    /* text-align: center; */
-    border-radius: 10px;
-    /* color: gray; */
-    /* font-weight: bold; */
-    display: flex;
-    align-items: center;
+  /* box-shadow: 1px 2px rgba(60, 90, 30, 0.2); */
+  padding: 1em 0;
+  padding-left: 2em;
+  margin: 1em 0;
+  /* text-align: center; */
+  border-radius: 10px;
+  /* color: gray; */
+  /* font-weight: bold; */
+  display: flex;
+  align-items: center;
 }
+/* .opt:hover {
+  /* background-color: rgb(2, 110, 2); */
+  box-shadow: 0.8px 0.8px gray;
+} */
 .opt a {
-    text-decoration: none;
-    color: gray;
+  text-decoration: none;
+  color: gray;
 }
+
 a > span {
-    margin-left: 1em;
+  margin-left: 1em;
 }
 /* .opt:active, a:active {
     background-color: green;
     color: whitesmoke;
 } */
 .logout-btn {
-    /* width: 100%; */
-    text-align: center;
-    padding: 1em 3em;
-    /* border-top: .1em solid rgb(60, 90, 30); */
-    border-bottom: .1em solid rgb(60, 90, 30);
-    display: flex;
-    align-items: center;
-    /* background-color: yellow; */
+  /* width: 100%; */
+  text-align: center;
+  padding: 1em 3em;
+  /* border-top: .1em solid rgb(60, 90, 30); */
+  border-bottom: 0.1em solid rgb(60, 90, 30);
+  display: flex;
+  align-items: center;
+  /* background-color: yellow; */
 }
 .logout-btn span {
-    font-size: small;
-    color: gray;
-    margin-left: 1em;
+  font-size: small;
+  color: gray;
+  margin-left: 1em;
 }
 .admin-foot {
-    display: flex;
-    flex-direction: column;
-    padding: 1em 2em;
+  display: flex;
+  flex-direction: column;
+  padding: 1em 2em;
 }
 .main-menu {
-    /* margin-top: 4em; */
-    margin-bottom: 1.5em;
-    border-radius: 4px;
-    /* width: 88%; */
+  /* margin-top: 4em; */
+  margin-bottom: 1.5em;
+  border-radius: 4px;
+  width: 80%;
 }

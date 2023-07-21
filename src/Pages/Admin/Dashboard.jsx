@@ -18,6 +18,10 @@ export default function Dashboard() {
   const path = useLocation().pathname;
   console.log(path);
 
+  // const onMouseOver = () => {
+
+  // }
+
   return (
     <div className="dash-container">
       <nav>
