@@ -131,12 +131,12 @@ nav {
 }
 .side-menu {
   /* width: 20%; */
-  /* padding: 0 2em; */
+  padding: 2em 4em;
 }
 .menu-list {
   /* width: 100%; */
   list-style: none;
-  padding: 2em;
+  /* padding: 2em; */
   margin-bottom: 24em;
 }
 .opt {
@@ -187,5 +187,5 @@ a > span {
   /* margin-top: 4em; */
   margin-bottom: 1.5em;
   border-radius: 4px;
-  width: 80%;
+  width: 79%;
 }

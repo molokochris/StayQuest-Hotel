@@ -16,9 +16,16 @@ export default function AddGuest() {
     setIsShowGuests(true);
     console.log("selectted: ", e);
   };
+  const [pass, setPass] = useState("ID number")
+  const showPass = (opt) => {
+    opt === "2" ? setPass("Passport ID") : setPass("ID number")
+  } 
   return (
     <div className="add-guests">
-      <div className=""></div>
+      <div className="ad-banner">
+        {/* <img src="" alt="" /> */}
+        <h4>Add Guest:</h4>
+      </div>
       <form className="add-form">
         <div className="g-names">
           <label>Names:</label>
@@ -30,7 +37,7 @@ export default function AddGuest() {
         <div className="g-address">
           <label>Address:</label>
           <br />
-          <input className="mx-text" type="text" placeholder="" />
+          <input className="mx-text" type="text" placeholder="Street Address" />
           <input className="mx-text" type="text" placeholder="" />
           <input className="md-text" type="text" placeholder="" />
           <input className="md-text" type="text" placeholder="" />
@@ -38,20 +45,20 @@ export default function AddGuest() {
         </div>
         <br />
         <div className="g-id">
-          <select>
+          <select onChange={(e) => showPass(e.target.value)}>
             <option value="1">South African ID</option>
-            <option value="1">Passsport</option>
+            <option value="2">Passsport</option>
           </select>
-          <input type="number" placeholder="ID number" />
+          <input type="number" placeholder={pass} />
         </div>
         <br />
         <div className="g-contacts">
           <input type="text" placeholder="Email" />
           <input type="text" placeholder="Contact Numbers" />
         </div>
-        <div className="g-room" onChange={(e) => showGuests(e.target.value)}>
+        <div className="g-room">
           <label>
-            <select>
+            <select onChange={(e) => showGuests(e.target.value)}>
               <option value="-1">Room Type</option>
               <option value="1">Standard Room</option>
               <option value="2">Deluxe Room</option>
