@@ -5,10 +5,10 @@
   align-items: center;
   flex-direction: column;
   background-color: aliceblue;
-  width: 100%;
-  position: absolute;
-  z-index: 1;
-  height: 100vh;
+  /* width: 100%; */
+  /* position: absolute; */
+  /* z-index: 1; */
+  /* height: 100vh; */
   /* border-radius: 10px; */
   /* left: 30%; */
   /* transition: ease-in-out; */
@@ -135,15 +135,15 @@
     text-decoration: none;
 } */
 .payment-div {
-    /* height: 20vh; */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 2px;
-    align-items: center;
-    background-color: rgba(0, 0, 1, 0.3);
-    flex-direction: column;
-    color: whitesmoke;
+  /* height: 20vh; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2px;
+  align-items: center;
+  background-color: rgba(0, 0, 1, 0.3);
+  flex-direction: column;
+  color: whitesmoke;
 }
 .rm-pay:hover {
   background-color: whitesmoke;
@@ -153,6 +153,6 @@
   font-weight: bold;
 }
 .rm-pay:active {
-    /* background-color: ; */
-    color: whitesmoke;
+  /* background-color: ; */
+  color: whitesmoke;
 }

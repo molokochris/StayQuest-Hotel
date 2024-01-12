@@ -13,6 +13,40 @@ export default function Home() {
     <>
       <div className="landingPage">
         <div className="land-banner-container">
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <div
+              style={{
+                width: 50,
+                height: 50,
+                background: "whitesmoke",
+                borderRadius: 100,
+              }}
+            ></div>
+            <div
+              style={{
+                width: 150,
+                paddingBlock: 10,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "center",
+                fontSize: 18,
+                fontWeight: "bold",
+                color: "rgb(61,98,20)",
+              }}
+            >
+              welcome,
+              <br />
+              mang mang
+            </div>
+          </div>
           <div className="logo-container">
             <span>StayQuest</span>
           </div>

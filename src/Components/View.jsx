@@ -1,16 +1,54 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../assets/stylesheets/roomView.css";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
-import Modal from "../Components/Modal";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 export default function View(props) {
   const [showPay, setShowPay] = useState(false);
   const [openModal, setOpenModal] = useState(false);
-  const [loginSuccess, setLoginSuccess] = useState(props.loginSuccess);
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
 
-
-  console.log(loginSuccess)
+  const [errors, setErrors] = useState({});
   const navigation = useNavigate();
+
+  useEffect(() => {
+    // Validate dates on every change
+    validateDates();
+  }, [startDate, endDate]);
+
+  const handleStartDateChange = (date) => {
+    setStartDate(date);
+    setEndDate(null); // Reset end date if start date changes
+  };
+
+  const handleEndDateChange = (date) => {
+    setEndDate(date);
+  };
+
+  const validateDates = () => {
+    const today = new Date();
+    const errors = {};
+
+    if (startDate && startDate < today) {
+      errors.startDate = "Check-in date cannot be in the past";
+    }
+
+    if (endDate && endDate <= startDate) {
+      errors.endDate = "Check-out date must be after check-in date";
+    }
+    setErrors(errors);
+  };
+
+  const handleBooking = () => {
+    if (!Object.keys(errors).length) {
+      // Proceed with booking process using startDate and endDate
+      navigation("/rooms/payment", { state: { startDate, endDate } });
+      console.log("Booking with dates:", startDate, endDate);
+    }
+  };
+  console.log("Selected dates:", startDate, endDate);
 
   const goBack = () => {
     navigation("/");
@@ -20,9 +58,49 @@ export default function View(props) {
       <div className="head">StayQuest</div>
       <div className="s-head">
         <div className="rmm-type">Standard Room</div>
-        {loginSuccess ? (<div className="">Account</div>) : null}
       </div>
       <div className="i-head"></div>
+      <div
+        style={{
+          backgroundColor: "#d3d3d3",
+          height: "100px",
+          padding: "40px",
+          fontWeight: "bold",
+        }}
+      >
+        Book here
+        <div style={{ flexDirection: "row", display: "flex" }}>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            From:
+            {Object.entries(errors).map(([field, message]) => (
+              <p key={field} className="error">
+                {message}
+              </p>
+            ))}
+            <DatePicker
+              selected={startDate}
+              onChange={handleStartDateChange}
+              selectsStart
+              startDate={startDate}
+              endDate={endDate}
+              placeholderText="Check-in"
+            />
+          </div>
+          <div style={{ flexDirection: "column", display: "flex" }}>
+            To:
+            <DatePicker
+              selected={endDate}
+              onChange={handleEndDateChange}
+              selectsEnd
+              startDate={startDate}
+              endDate={endDate}
+              minDate={startDate}
+              placeholderText="Check-out"
+              disabled={!startDate} // Disable until start date is selected
+            />
+          </div>
+        </div>
+      </div>
       <div className="z-section">
         <div className="rm-facilities">
           <div className="title">Facilities</div>
@@ -92,16 +170,17 @@ export default function View(props) {
               </span>
             </p>
           </div>
-          <div
-            to="/rooms/standard-room/view"
+          {/* <Link to={"/rooms/payment"}> */}
+          <button
             className="rm-pay"
-            onClick={() => setOpenModal(true)}
+            onClick={handleBooking}
+            disabled={Object.keys(errors).length > 0}
           >
             pay
-          </div>
+          </button>
+          {/* </Link> */}
         </div>
       </div>
-      {openModal && <Modal openModal={openModal} setOpenModal={setOpenModal} />}
     </div>
   );
 }

@@ -5,9 +5,6 @@ import "../assets/stylesheets/facilities.css";
 import View from "../Components/View";
 
 export default function Rooms() {
-
-  
-
   return (
     <div className="container">
       <div className="inner-container">
@@ -49,13 +46,10 @@ export default function Rooms() {
             </div>
             <div className="img-container">
               <img alt="" src="/standard.jpg" />
-              <Link
-                to="standard-room"
-                className="book-btn"
-              >
+              <Link to="standard-room" className="book-btn">
                 Reserve
               </Link>
-              <div className="avail-room">5</div>
+              <div className="avail-room">5 available</div>
             </div>
           </div>
           <div className="room">
@@ -80,7 +74,7 @@ export default function Rooms() {
             <div className="img-container">
               <img alt="" src="/deluxe.jpg" />
               <div className="book-btn">Reserve</div>
-              <div className="avail-room">5</div>
+              <div className="avail-room">5 available</div>
             </div>
           </div>
           <div className="room">
@@ -105,7 +99,7 @@ export default function Rooms() {
             <div className="img-container">
               <img alt="" src="/executive.jpg" />
               <div className="book-btn">Reserve</div>
-              <div className="avail-room">5</div>
+              <div className="avail-room">5 available</div>
             </div>
           </div>
           <div className="room">
@@ -131,7 +125,7 @@ export default function Rooms() {
             <div className="img-container">
               <img alt="" src="/presidential.jpg" />
               <div className="book-btn">Reserve</div>
-              <div className="avail-room">5</div>
+              <div className="avail-room">5 available</div>
             </div>
           </div>
         </div>
